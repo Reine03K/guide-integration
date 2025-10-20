@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Thème via variables (compatible shadcn) */
+:root {
+--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+
+
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+
+
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+
+
+/* Couleur principale (bleu violacé) */
+--primary: 252 82% 56%;
+--primary-foreground: 0 0% 100%;
+
+
+/* Secondaire (gris doux) */
+--secondary: 220 14% 96%;
+--secondary-foreground: 240 6% 10%;
+
+
+--muted: 220 14% 96%;
+--muted-foreground: 240 5% 26%;
+
+
+--accent: 260 92% 70%;
+--accent-foreground: 0 0% 100%;
+
+
+--destructive: 0 84% 60%;
+--destructive-foreground: 0 0% 100%;
+
+
+--border: 220 13% 91%;
+--input: 220 13% 91%;
+--ring: 252 82% 56%;
+
+
+--radius: 1rem; /* ~ rounded-2xl */
+}
+
+
+/* Optionnel : mode sombre */
+.dark {
+--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+.rounded-pro { border-radius: var(--radius); 
+}
+}
