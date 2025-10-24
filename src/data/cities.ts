@@ -1,4 +1,5 @@
 export type City = { slug: string; name: string; region: string }
+export const dynamic = "force-static"
 
 export const CITIES: City[] = [
   { slug: "strasbourg", name: "Strasbourg", region: "Grand Est" },

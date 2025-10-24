@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
+export const dynamic = "force-static"
 
 const tiles = [
   { href: "/administratif", title: "Administratif", desc: "Vos démarches essentielles" },

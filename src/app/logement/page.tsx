@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { LOGEMENT_FR } from "@/data/logement"
+export const dynamic = "force-static"
 
 export default function Logement() {
   return (

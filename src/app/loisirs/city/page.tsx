@@ -1,18 +1,21 @@
 "use client"
 
 import Link from "next/link"
-import { CITIES } from "@/data/cities"
-import { Input } from "@/components/ui/input"
 import { useMemo, useState } from "react"
+import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
+import { CITIES } from "@/data/cities"
+
+export const dynamic = "force-static"
 
 export default function CitySelector() {
   const [q, setQ] = useState("")
-
   const list = useMemo(() => {
     const s = q.trim().toLowerCase()
     if (!s) return CITIES
-    return CITIES.filter(c => c.name.toLowerCase().includes(s) || c.region.toLowerCase().includes(s))
+    return CITIES.filter(c =>
+      c.name.toLowerCase().includes(s) || c.region.toLowerCase().includes(s)
+    )
   }, [q])
 
   return (

@@ -1,22 +1,26 @@
-import "./globals.css"
-import { Inter } from "next/font/google"
-import type { Metadata } from "next"
-import { Header } from "@/components/ui/header"
-
-const inter = Inter({ subsets: ["latin"] })
+// src/app/layout.tsx
+import type { Metadata } from "next";
+import "./globals.css";
+import RegisterSW from "./RegisterSW";
 
 export const metadata: Metadata = {
-  title: "Guide d’intégration",
-  description: "Centralise les démarches en France",
-}
+  title: "Guide Intégration",
+  description: "Démarches, logement, alimentation, transports et loisirs – en PWA, offline.",
+  themeColor: "#4f46e5",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: "/icons/icon-192.png",
+    apple: "/icons/icon-192.png"
+  }
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.className} bg-background text-foreground`}>
-        <Header />
-        <div className="container-pro py-8">{children}</div>
+    <html lang="fr">
+      <body>
+        <RegisterSW />
+        {children}
       </body>
     </html>
-  )
+  );
 }

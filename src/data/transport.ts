@@ -1,17 +1,20 @@
 export type Link = { label: string; url: string }
+export const dynamic = "force-static"
 
-export const TRANSPORT_BY_CITY: Record<string, Link[]> = {
+export const TRANSPORT_BY_CITY: Record<string,  Array<{ label: string; url: string }>> = {
   strasbourg: [
-    { label: "CTS – Réseau bus & tram", url: "https://www.cts-strasbourg.eu/" },
-    { label: "Badgéo – Carte", url: "https://www.cts-strasbourg.eu/fr/titres-tarifs/badgeo/" },
+    { label: "CTS – Transport en commun strasbourgeois", url: "https://www.cts-strasbourg.eu/" },
+    { label: "Velhop – Vélos en libre-service", url: "https://velhop.strasbourg.eu/" },
   ],
   paris: [
-    { label: "RATP – Bus/Métro/RER", url: "https://www.ratp.fr/" },
-    { label: "Pass Navigo", url: "https://www.iledefrance-mobilites.fr/titres-et-tarifs/passe-navigo" },
+    { label: "RATP (métro, RER, bus)", url: "https://www.ratp.fr/" },
+    { label: "Vélib’ Métropole", url: "https://www.velib-metropole.fr/" },
+    { label: "Navigo (cartes/abonnements)", url: "https://www.iledefrance-mobilites.fr/" },
   ],
-  lyon: [
-    { label: "TCL – Réseau Lyon", url: "https://www.tcl.fr/" },
+    lyon: [
+   { label: "TCL (métro, tram, bus)", url: "https://www.tcl.fr/" },
     { label: "Vélo’v", url: "https://www.velov.grandlyon.com/" },
+    { label: "SNCF TER AuRA", url: "https://www.ter.sncf.com/auvergne-rhone-alpes" },
   ],
   toulouse: [
     { label: "Tisséo", url: "https://www.tisseo.fr/" },
@@ -28,4 +31,12 @@ export const TRANSPORT_BY_CITY: Record<string, Link[]> = {
   vendee: [
     { label: "Impulsyon (La Roche-sur-Yon)", url: "https://www.impulsyon.fr/" },
   ],
-}
+   marseille: [
+    { label: "RTM (métro, tram, bus)", url: "https://www.rtm.fr/" },
+    { label: "Le Vélo", url: "https://levelo-mpm.fr/" },
+    { label: "SNCF TER Sud", url: "https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur" },
+  ],
+  };
+  export const TRANSPORT_CATEGORIES = [
+  { key: "transport", label: "Transport" },
+];
