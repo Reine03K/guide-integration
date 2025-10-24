@@ -9,7 +9,7 @@ export type Task = {
   id: string;
   title: string;
   description?: string;
-  links?: Link[];
+  links?: Link[]; 
   steps?: string[]; // 👈 AJOUT
 };
 
